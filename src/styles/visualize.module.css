@@ -1,0 +1,163 @@
+.container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: -1vh;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rangeSlider
+{
+    appearance: none;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #d3d3d3;
+}
+
+.rangeSlider::-webkit-slider-thumb
+{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: green;
+    cursor: pointer;
+}
+
+.rangeSlider::-webkit-slider-thumb:hover
+{
+    background: darkgreen;
+}
+
+.toggle
+{
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: large;
+}
+
+.switch
+{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.switch input
+{ 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: black;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before
+{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+  /* input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  } */
+
+input:checked + .slider:before
+{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.searchDropdown
+{
+    height: 25px;
+    margin-left: 0.5vw;
+    margin-right: 1vw;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: large;
+}
+
+.sortDropdown
+{
+    height: 25px;
+    margin-left: 0.5vw;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: large;
+}
+
+.visualize
+{
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.button
+{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    width: auto;
+    height: 32px;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.button:hover
+{
+    background-color: darkgreen;
+}
+
+.searchInput
+{
+    display: flex;
+    align-items: center;
+}
+
+.searchText
+{
+    width: 70px;
+    height: 25px;
+    font-family: monospace;
+    font-size: 18px;
+}
